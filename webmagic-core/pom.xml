@@ -3,7 +3,7 @@
     <parent>
         <groupId>us.codecraft</groupId>
         <artifactId>webmagic-parent</artifactId>
-        <version>0.7.3</version>
+        <version>0.7.4</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -78,6 +78,13 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/cglib/cglib -->
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>3.2.6</version>
         </dependency>
 
     </dependencies>

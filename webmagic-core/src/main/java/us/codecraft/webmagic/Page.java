@@ -4,6 +4,7 @@ import org.apache.commons.lang3.StringUtils;
 import us.codecraft.webmagic.selector.Html;
 import us.codecraft.webmagic.selector.Json;
 import us.codecraft.webmagic.selector.Selectable;
+import us.codecraft.webmagic.utils.BeanMapUtil;
 import us.codecraft.webmagic.utils.HttpConstant;
 import us.codecraft.webmagic.utils.UrlUtils;
 
@@ -198,6 +199,15 @@ public class Page {
 
     public ResultItems getResultItems() {
         return resultItems;
+    }
+
+    /**
+     * Put bean as ResultItem field
+     * @param bean
+     */
+    public void setResultItemsFormBean(Object bean) {
+        Map<String, Object> map = BeanMapUtil.beanToMap(bean);
+        resultItems.getAll().putAll(map);
     }
 
     public int getStatusCode() {
